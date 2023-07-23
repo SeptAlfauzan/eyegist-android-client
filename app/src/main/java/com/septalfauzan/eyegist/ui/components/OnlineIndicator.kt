@@ -1,0 +1,33 @@
+package com.septalfauzan.eyegist.ui.components
+
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+
+
+@Composable
+fun OnlineIndicator(isOnline: Boolean) {
+    Box(
+        modifier = Modifier
+            .size(16.dp)
+            .border(
+                border = BorderStroke(
+                    1.dp,
+                    color = Color(if (isOnline) 0xFF36FD85 else 0xFF7C7C7C)
+                ),
+                shape = CircleShape
+            )
+            .padding(2.dp)
+            .clip(CircleShape)
+            .background(Color(0xFF36FD85))
+    )
+}
